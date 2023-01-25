@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@drawable/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/toolwar_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/toolbar_conners"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:elevation="2dp"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Automatic Mode"
+                android:textColor="@color/primary"
+                android:textSize="22dp"
+                android:layout_marginLeft="35dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Show Your Answer"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Show Touch"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Internet Speed"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Fast"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Shlow"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Hang in Game"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Auto Show"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Auto Play"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Auto Touch"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Auto Fill"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Auto Select"/>
+
+                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="Yes"
+                            android:layout_marginLeft="60dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+                        <RadioButton
+                            android:layout_width="150dp"
+                            android:layout_height="40dp"
+                            android:textColor="@color/primary"
+                            android:background="@drawable/round_white_back"
+                            android:text="No"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:buttonTint="@color/primary"
+                            android:padding="10dp"
+                            android:textSize="18dp"/>
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/button_activate"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    app:cardBackgroundColor="@color/primary"
+                    app:cardCornerRadius="25dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="Activate"/>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
